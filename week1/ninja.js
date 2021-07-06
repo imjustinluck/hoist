@@ -20,3 +20,22 @@ const nin = new Ninja("Justin",100)
 nin.drinkSake()
 nin.sayName()
 nin.showStats()
+
+class Sensei extends Ninja{
+    constructor(name, health = 200, strength = 10, speed = 10, wisdom = 10){
+        super(name, health, strength, speed);
+        this.wisdom = wisdom;
+    }
+    speakWisdom(){
+        super.drinkSake()
+        console.log("Hello!")
+    }
+    showStats(){
+        console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${this.speed}, Strength: ${this.strength}`)
+    }
+}
+
+const sen = new Sensei("Justin")
+console.log(sen)
+sen.speakWisdom()
+sen.showStats()
